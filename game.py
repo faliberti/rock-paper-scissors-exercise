@@ -1,6 +1,13 @@
 # game.py
 import random
 
+import os
+
+from dotenv import load_dotenv
+load_dotenv()
+USER_NAME = os.getenv("USER_NAME", default="Player One") 
+print(f"PLAYER: '{USER_NAME}'")
+
 print("Rock, Paper, Scissors, Shoot!")
 
 
@@ -29,6 +36,7 @@ if user_choice not in round_options:
 # sim comp input
 computer_choice = random.choice(round_options)
 print(f"The computer chose: {computer_choice}")
+print("-------------------")
 
 # determine who won
 # This code is based on Prof. Rossetti's on slack.
@@ -55,6 +63,11 @@ elif user_choice == "rock":
         print("Oh, it's a tie.")
 else:
     print("OOPS SOMETHING WENT WRONG.")
+
+print("-------------------")
+
+# End game message
+print("Thanks for playing. Please play again!")
 
 
 
