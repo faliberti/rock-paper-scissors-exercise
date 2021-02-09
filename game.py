@@ -25,7 +25,30 @@ exit()
 
 
 # determine who won
-print("-------------------")
-print("Oh, the computer won. It's ok.")
-print("-------------------")
-print("Thanks for playing. Please play again!")
+# This code is based on Prof. Rossetti's on slack.
+if user_choice == "scissors":
+    if computer_choice == "scissors":
+        print("Oh, it's a tie.")
+    elif computer_choice == "rock":
+        print("Oh, the computer won. It's ok.")
+    elif computer_choice == "paper":
+        print("Oh, you won! Nice job.")
+elif user_choice == "paper":
+    if computer_choice == "rock":
+        print("Oh, you won! Nice job.")
+    elif computer_choice == "paper":
+        print("Oh, it's a tie.")
+    elif computer_choice == "scissors":
+        print("Oh, the computer won. It's ok.")
+elif user_choice == "rock":
+    if computer_choice == "paper":
+        print("Oh, the computer won. It's ok.")
+    elif computer_choice == "scissors":
+        print("Oh, you won! Nice job.")
+    elif computer_choice == "rock":
+        print("Oh, it's a tie.")
+else:
+    print("OOPS SOMETHING WENT WRONG.")
+
+
+
