@@ -15,14 +15,20 @@ user_choice = input("Please choose either 'rock', 'paper', or 'scissors'")
 print(user_choice)
 print(f"You chose: {user_choice}")
 
+# create round options list
+round_options = ['rock', 'paper', 'scissors']
+
+# validate the user selection
+
+user_choice = user_choice.lower()
+
+if user_choice not in round_options:
+    print("OOPS, please choose a valid option and try again")
+    exit()  
 
 # sim comp input
-round_options = ['rock', 'paper', 'scissors']
 computer_choice = random.choice(round_options)
 print(f"The computer chose: {computer_choice}")
-
-exit()
-
 
 # determine who won
 # This code is based on Prof. Rossetti's on slack.
